@@ -16,11 +16,14 @@ main(){
 
     fahr = lower;
 
+    // Heading
+    printf("Fahrenheit-Celsius table\n");
+
     while (fahr <= upper) {
         // if the while loop contained one line then the braces can be removed
 
         // compute celsius equivalent 
-        
+
         celsius = (5.0/9.0) * (fahr-32.0); // FYI, integer division is truncated, 5/9 would be 0
         printf("%3.0f %6.1f\n", fahr, celsius); // right-justify integers with 3 and 6 digit wide, fahr no decimal point, celsisu one decimal point
         fahr = fahr + step;
