@@ -42,4 +42,12 @@ main(){
         celsius = celsius + step;
         
     }
+
+    // Heading
+    printf("Reverse Fahrenheit-Celsius table\n");
+
+    for(fahr = 300; fahr >= lower; fahr = fahr - step){
+        celsius = (5.0/9.0) * (fahr-32.0);
+        printf("%3.0f %6.1f\n", fahr, celsius);
+    }
 }
