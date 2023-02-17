@@ -6,7 +6,7 @@
 
 main(){
     // variables
-    int fahr, celsius;
+    float fahr, celsius;
     int lower, upper, step;
 
     // setting variables
@@ -21,8 +21,8 @@ main(){
 
         // compute celsius equivalent 
         
-        celsius = 5 * (fahr-32) / 9; // FYI, integer division is truncated, 5/9 would be 0
-        printf("%3d\t%6d\n", fahr, celsius); // right-justify integers with 3 and 6 digit wide 
+        celsius = (5.0/9.0) * (fahr-32.0); // FYI, integer division is truncated, 5/9 would be 0
+        printf("%3.0f %6.1f\n", fahr, celsius); // right-justify integers with 3 and 6 digit wide, fahr no decimal point, celsisu one decimal point
         fahr = fahr + step;
     }
 
