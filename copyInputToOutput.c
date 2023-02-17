@@ -11,11 +11,9 @@ main(){
     /* get user input 
        will return a distinctive value when there is no more input, a value that cannot be confused with any real character
     */
-    character = getchar();
 
-    while (character != EOF){
+    while ((character = getchar()) != EOF){
         /* display character in the output stream */
         putchar(character);
-        character = getchar();
     }
 }
