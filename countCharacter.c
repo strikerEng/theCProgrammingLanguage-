@@ -8,13 +8,12 @@
 main(){
     /* 
        variable declaration
-       FYI a long type is at least 32 bits
+       FYI a double type is at least 64 bits
     */
-    long nc;
+    double nc;
 
-    nc = 0;
     /* one instruction while loops can remove the curly braces */
-    while(getchar() != EOF)
-        ++nc;
-    printf("%ld\n", nc);
+    for (nc = 0; getchar() != EOF; ++nc)
+        ;
+    printf("%.0f\n", nc);
 }
