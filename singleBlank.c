@@ -10,13 +10,13 @@ main(){
     
     while(( input = getchar()) != EOF){
         
-        if (input == ' ' && !blankFound){
+        if (input == ' ' && !blankFound){ /* found a blank in the word */
             blankFound = 1;
             putchar(input);
         }
-        else if(input == ' ' && blankFound)
+        else if(input == ' ' && blankFound) /* do nothing if another blank is encountered */
             ;
-        else
+        else /* display the rest of the characters */
             putchar(input);
     }
 
