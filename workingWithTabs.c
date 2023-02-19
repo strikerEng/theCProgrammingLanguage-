@@ -8,7 +8,7 @@ int entab(void);
 main(){
     int c;
 
-    while (detab())
+    while (entab())
         ;
 
     return 0;
@@ -35,14 +35,29 @@ int detab(){
 
 /* replace strings of blanks by the minimum number of tabs and blanks to achieve the same spacing */
 int entab(){
-    int c, blankcount = 0; 
+    int c, blankcount = 0, tabsToCreate = 0, blanksToCreate = 0; 
 
     while ((c = getchar()) != EOF){
         if (c == ' '){
             ++blankcount;
         }
         else{
-            printf("remainder: %d", blankcount % TAB_STOPS);
+            tabsToCreate = blankcount / TAB_STOPS;
+            blanksToCreate = blankcount % TAB_STOPS;
+
+            printf("Full tabs: %d", tabsToCreate);
+            printf(" Blank spaces: %d", blanksToCreate);
+            printf("\n");
+
+            for(int i = 0; i < tabsToCreate; ++i){
+                printf("tttt"); /* to visually see the tabs */
+            }
+
+            for(int i = 0; i < blanksToCreate; ++i){
+                printf("b"); /* to visually see the blanks */
+            }
+            printf("\n");
+            blankcount = 0; /* reset blank counter */
         }
 
     }
