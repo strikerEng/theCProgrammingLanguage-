@@ -4,6 +4,9 @@
    for fahr = 0, 20, …, 300
 */
 
+/* function prototype */
+double convertFahrenheitToCelsius(int temp);
+
 main(){
     // variables
     float fahr, celsius;
@@ -24,7 +27,7 @@ main(){
 
         // compute celsius equivalent 
 
-        celsius = (5.0/9.0) * (fahr-32.0); // FYI, integer division is truncated, 5/9 would be 0
+        celsius = convertFahrenheitToCelsius(fahr); // FYI, integer division is truncated, 5/9 would be 0
         printf("%3.0f %6.1f\n", fahr, celsius); // right-justify integers with 3 and 6 digit wide, fahr no decimal point, celsisu one decimal point
         fahr = fahr + step;
     }
@@ -47,7 +50,13 @@ main(){
     printf("Reverse Fahrenheit-Celsius table\n");
 
     for(fahr = 300; fahr >= lower; fahr = fahr - step){
-        celsius = (5.0/9.0) * (fahr-32.0);
+        celsius = convertFahrenheitToCelsius(fahr);
         printf("%3.0f %6.1f\n", fahr, celsius);
     }
+}
+
+/* function definition to convert fahrenheit to celsius */
+
+double convertFahrenheitToCelsius(int fahrenheit){
+    return (5.0/9.0) * (fahrenheit-32.0);
 }
