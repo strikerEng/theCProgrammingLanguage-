@@ -10,8 +10,8 @@ main(){
 
     nwhite = nother = 0;
     while((c = getchar()) != EOF){
-        if (c >= '0' && c <= '9') // if the character is one of the ten digits
-            ++ndigit[c-'0']; // increment its count by 1 in the array 
+        if (c >= '0' && c <= '9') /* if the character is one of the ten digits */
+            ++ndigit[c-'0']; /* increment its count by 1 in the array */
         else if (c == ' ' || c == '\n' || c == '\t') /* whitespace character */
             ++nwhite; 
         else  /* any other character */
